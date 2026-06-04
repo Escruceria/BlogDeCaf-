@@ -1,21 +1,21 @@
-# BlogDeCafe
+# BlogDeCafé
 
-Sitio web estatico sobre cafe, recetas, consejos y cursos para principiantes.
+Sitio web estático sobre café, recetas, consejos y cursos para principiantes.
 
-## Paginas
+## Páginas
 
 - Inicio con entradas del blog y cursos destacados.
-- Nosotros con descripcion del proyecto.
+- Nosotros con descripción del proyecto.
 - Cursos con talleres disponibles y enlaces de reserva.
-- Entrada de blog sobre tipos de grano de cafe.
+- Entrada de blog sobre tipos de grano de café.
 - Contacto con formulario validado en frontend.
 
-## Tecnologias
+## Tecnologías
 
 - HTML5
 - CSS3
 - JavaScript
 
-## Como abrirlo
+## Cómo abrirlo
 
 Abre `index.html` en el navegador o sirve la carpeta desde XAMPP/Apache.
