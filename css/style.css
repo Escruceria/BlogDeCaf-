@@ -1,7 +1,11 @@
+/* Variables globales del proyecto. */
+/*Se definen en :root para poder reutilizarlas en todo el archivo CSS.*/
 :root {
+    /* Fuentes principales del sitio */
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafos: 'Open Sans', sans-serif;
 
+    /* Paleta de colores del proyecto */
     --primario: #784D3C;
     --primarioOscuro: #5f3b2e;
     --acento: #d6a75c;
@@ -11,13 +15,29 @@
     --blanco: #ffffff;
     --negro: #000000;
 }
+
+/* 
+    Configuración base del documento.
+    box-sizing permite controlar mejor los tamaños de cajas.
+    font-size: 62.5% hace que 1rem equivalga aproximadamente a 10px.
+*/
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1 rem = 10px */    
 }
+
+/* 
+    Hereda box-sizing a todos los elementos y pseudo-elementos.
+    Esto evita cálculos complicados con padding y border.
+*/
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+/* 
+    Estilos generales del cuerpo del sitio.
+    Se aplica la fuente de párrafos, tamaño base, altura de línea y color del texto.
+*/
 body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
@@ -26,13 +46,27 @@ body {
 }
 
 /** Globales **/
+
+/* 
+    Contenedor reutilizable para centrar el contenido.
+    Usa el 90% del ancho disponible, con un máximo de 120rem.
+*/
 .contenedor {
     width: min(90%, 120rem);
     margin: 0 auto;
 }
+
+/* 
+    Quita el subrayado predeterminado de los enlaces.
+*/
 a {
     text-decoration: none;
 }
+
+/* 
+    Mejora de accesibilidad.
+    Muestra un contorno visible cuando el usuario navega con teclado.
+*/
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -40,44 +74,80 @@ textarea:focus-visible {
     outline: 3px solid var(--acento);
     outline-offset: 3px;
 }
+
+/* 
+    Tipografía común para todos los títulos.
+*/
 h1, h2, h3, h4 {
     font-family: var(--fuenteHeading);
     line-height: 1.2;
 }
+
+/* Tamaños específicos para cada nivel de título */
 h1 {
     font-size: 4.8rem;
 }
+
 h2 {
     font-size: 4rem;
 }
+
 h3 {
     font-size: 3.2rem;
 }
+
 h4 {
     font-size: 2.8rem;
 }
+
+/* 
+    Hace que las imágenes sean responsive.
+    display: block elimina espacios inferiores no deseados.
+*/
 img {
     max-width: 100%;
     display: block;
 }
+
 /** Utilidades **/
+
+/* Elimina márgenes */
 .no-margin {
     margin: 0;
 }
+
+/* Elimina rellenos internos */
 .no-padding {
     padding: 0;
 }
+
+/* Centra el texto */
 .centrar-texto {
     text-align: center;
 }
 
 /** Header **/
+
+/* 
+    Imagen de fondo en formato WebP.
+    Esta clase se aplica si el navegador soporta WebP.
+*/
 .webp .header {
     background-image: url(../img/banner.webp);
 }
+
+/* 
+    Imagen de fondo alternativa en JPG.
+    Se usa cuando el navegador no soporta WebP.
+*/
 .no-webp .header {
     background-image: url(../img/banner.jpg);
 }
+
+/* 
+    Encabezado principal del sitio.
+    Incluye imagen de fondo y altura fija.
+*/
 .header {
     position: relative;
     height: 60rem;
@@ -85,31 +155,55 @@ img {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+/* 
+    Capa oscura sobre la imagen del header.
+    Mejora la legibilidad del texto.
+*/
 .header::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .25));
 }
+
+/* 
+    Coloca el contenido del header por encima de la capa oscura.
+*/
 .header .contenedor,
 .header__texto {
     position: relative;
 }
+
+/* 
+    Texto principal del header.
+*/
 .header__texto {
    text-align: center;
    color: var(--blanco);
    margin-top: 5rem;
    padding: 0 2rem;
 }
+
+/* 
+    En pantallas medianas o grandes, aumenta el margen superior del texto.
+*/
 @media (min-width: 768px) {
     .header__texto {
         margin-top: 15rem;
     }
 }
+
+/* 
+    Espaciado superior de la barra de navegación.
+*/
 .barra {
     padding-top: 4rem;
 }
 
+/* 
+    En pantallas grandes, organiza logo y navegación en una fila.
+*/
 @media (min-width: 768px) {
     .barra {
         display: flex;
@@ -117,22 +211,41 @@ img {
         align-items: center;
     }
 }
+
+/* 
+    Color del logo.
+*/
 .logo {
     color: var(--blanco);
-    
 }
+
+/* 
+    Parte normal del nombre del logo.
+*/
 .logo__nombre {
     font-weight: 400;
 }
+
+/* 
+    Parte resaltada del logo.
+*/
 .logo__bold {
     font-weight: 700;
 }
+
+/* 
+    En pantallas grandes, muestra la navegación en fila con separación.
+*/
 @media (min-width: 768px) {
     .navegacion {
         display: flex;
         gap: 2rem;
     }
 }
+
+/* 
+    Estilos de los enlaces del menú de navegación.
+*/
 .navegacion__enlace {
     display: block;
     text-align: center;
@@ -140,11 +253,19 @@ img {
     color: var(--blanco);
     transition: color .2s ease;
 }
+
+/* 
+    Cambia el color al pasar el cursor o cuando el enlace está activo.
+*/
 .navegacion__enlace:hover,
 .navegacion__enlace--activo {
     color: var(--acento);
 }
 
+/* 
+    Layout principal del index.
+    En pantallas grandes divide el contenido en blog y sidebar.
+*/
 @media (min-width: 768px) {
     .contenido-principal {
         display: grid;
@@ -153,14 +274,25 @@ img {
     }
 }
 
+/* 
+    Separación visual entre entradas del blog.
+*/
 .entrada {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
+
+/* 
+    Quita el borde y margen inferior a la última entrada.
+*/
 .entrada:last-of-type {
     border: none;
     margin-bottom: 0;
 }
+
+/* 
+    Estilos base para botones del sitio.
+*/
 .boton {
     display: block;
     font-family: var(--fuenteHeading);
@@ -175,53 +307,100 @@ img {
     transition: background-color .2s ease, transform .2s ease;
 }
 
+/* 
+    En pantallas grandes, el botón ocupa solo el ancho de su contenido.
+*/
 @media (min-width: 768px) {
     .boton {
         display: inline-block;
-
     }
 }
+
+/* 
+    Efecto visual al pasar el cursor sobre los botones.
+*/
 .boton:hover {
     cursor: pointer;
     transform: translateY(-1px);
 }
+
+/* 
+    Botón principal, usado para acciones importantes.
+*/
 .boton--primario {
     background-color: var(--negro);
 }
+
+/* 
+    Estado hover del botón principal.
+*/
 .boton--primario:hover {
     background-color: #2b2b2b;
 }
+
+/* 
+    Botón secundario, usado para acciones complementarias.
+*/
 .boton--secundario {
     background-color: var(--primario);
 }
+
+/* 
+    Estado hover del botón secundario.
+*/
 .boton--secundario:hover {
     background-color: var(--primarioOscuro);
 }
 
+/* 
+    Lista de cursos sin viñetas.
+*/
 .cursos {
     list-style: none;
 }
 
+/* 
+    Widget individual de curso en la barra lateral.
+*/
 .widget-curso {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
+
+/* 
+    Elimina borde y margen inferior del último widget.
+*/
 .widget-curso:last-of-type {
     border: none;
     margin-bottom: 0;
 }
+
+/* 
+    Etiquetas de información del widget, como Precio y Cupo.
+*/
 .widget-curso__label {
     font-family: var(--fuenteHeading);
     font-weight: bold;
 }
+
+/* 
+    Valor de la información del curso.
+*/
 .widget-curso__info {
     font-weight: normal;
 }
+
+/* 
+    Tamaño de texto para etiquetas e información del widget.
+*/
 .widget-curso__label,
 .widget-curso__info {
     font-size: 2rem;
 }
 
+/* 
+    Pie de página del sitio.
+*/
 .footer {
     background-color: var(--negro);
     padding-bottom: 3rem;
@@ -229,6 +408,11 @@ img {
 }
 
 /** Sobre Nosotros **/
+
+/* 
+    En pantallas grandes, divide la sección Nosotros en dos columnas:
+    imagen y texto.
+*/
 @media (min-width: 768px) {
     .sobre-nosotros {
         display: grid;
@@ -238,10 +422,18 @@ img {
 }
 
 /** Cursos **/
+
+/* 
+    Contenedor individual de cada curso.
+*/
 .curso {
     padding: 3rem 0;
     border-bottom: 1px solid var(--gris);
 }
+
+/* 
+    En pantallas grandes, muestra imagen e información del curso en columnas.
+*/
 @media (min-width: 768px) {
     .curso {
         display: grid;
@@ -249,22 +441,42 @@ img {
         column-gap: 2rem;
     }
 }
+
+/* 
+    Elimina el borde inferior del último curso.
+*/
 .curso:last-of-type {
    border: none;
 }
+
+/* 
+    Etiquetas de información del curso, como Precio y Cupo.
+*/
 .curso__label {
     font-family: var(--fuenteHeading);
     font-weight: bold;
 }
+
+/* 
+    Valor asociado a la etiqueta del curso.
+*/
 .curso__info {
     font-weight: normal;
 }
+
+/* 
+    Tamaño de texto para etiquetas e información del curso.
+*/
 .curso__label,
 .curso__info {
     font-size: 2rem;
 }
 
 /** Contacto **/
+
+/* 
+    Imagen de fondo decorativa para la sección de contacto.
+*/
 .contacto-bg {
     background-image: url(../img/contacto.jpg);
     height: 40rem;
@@ -272,6 +484,10 @@ img {
     background-repeat: no-repeat;
 }
 
+/* 
+    Contenedor visual del formulario.
+    Usa margen negativo para superponerse parcialmente sobre la imagen.
+*/
 .formulario {
     background-color: var(--blanco);
     margin: -5rem auto 0 auto;
@@ -279,15 +495,27 @@ img {
     padding: 2.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .12);
 }
+
+/* 
+    Separación inferior entre campos del formulario.
+*/
 .campo {
     margin-bottom: 2rem;
 }
+
+/* 
+    Etiqueta de cada campo del formulario.
+*/
 .campo__label {
     display: block;
     margin-bottom: .5rem;
     font-family: var(--fuenteHeading);
     font-weight: 700;
 }
+
+/* 
+    Estilos generales para inputs y textarea.
+*/
 .campo__field {
     width: 100%;
     border: 1px solid var(--gris);
@@ -295,10 +523,19 @@ img {
     border-radius: .4rem;
     background-color: var(--grisClaro);
 }
+
+/* 
+    Modificador específico para el textarea.
+    Permite cambiar su altura verticalmente.
+*/
 .campo__field--textarea {
     height: 20rem;
     resize: vertical;
 }
+
+/* 
+    Mensaje de alerta o notificación del formulario.
+*/
 .alerta {
     margin: 0;
     padding: 1rem;
@@ -307,20 +544,31 @@ img {
     font-weight: 700;
 }
 
+/* 
+    Ajustes del formulario en pantallas medianas o grandes.
+*/
 @media (min-width: 768px) {
+
+    /* Aumenta el espacio interno del formulario */
     .formulario {
         padding: 5rem;
     }
+
+    /* Organiza cada campo en fila: label a la izquierda y campo a la derecha */
     .campo {
         display: flex;
         align-items: flex-start;
     }
+
+    /* Define el ancho fijo de las etiquetas en escritorio */
     .campo__label {
         flex: 0 0 9rem;
         text-align: right;
         padding-right: 2rem;
         margin-bottom: 0;
     }
+
+    /* El campo ocupa el espacio restante */
     .campo__field {
         flex: 1;
     }

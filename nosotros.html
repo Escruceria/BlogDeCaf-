@@ -1,61 +1,118 @@
 <!DOCTYPE html>
+<!-- Indica que el documento utiliza HTML5 -->
 <html lang="es">
+<!-- Define el idioma principal del sitio como español -->
+
 <head>
+    <!-- Configuración de caracteres para permitir tildes, ñ y caracteres especiales -->
     <meta charset="UTF-8">
+
+    <!-- Permite que la página se adapte correctamente a pantallas móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Nosotros | BlogDeCafé</title>
+
+    <!-- Descripción de la página para buscadores y SEO -->
     <meta name="description" content="Conoce la historia de BlogDeCafé y nuestra forma de enseñar preparación, cata y cultura cafetera.">
+
+    <!-- Hoja de estilos normalize.css para unificar estilos entre navegadores -->
     <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Importación de fuentes desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos principal del proyecto -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Encabezado principal de la página -->
     <header class="header">
 
+        <!-- Contenedor que centra el contenido y controla el ancho máximo -->
         <div class="contenedor">
+
+            <!-- Barra superior que contiene el logo y el menú de navegación -->
             <div class="barra">
+
+                <!-- Logo del sitio, enlaza hacia la página principal -->
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Blog<span class="logo__bold">DeCafé</span>
+                    </h1>
                 </a>
 
+                <!-- Menú de navegación principal -->
                 <nav class="navegacion" aria-label="Navegación principal">
+                    <!-- Enlace activo que indica que el usuario está en la página Nosotros -->
                     <a href="nosotros.html" class="navegacion__enlace navegacion__enlace--activo">Nosotros</a>
+
+                    <!-- Enlace hacia la página de cursos -->
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+
+                    <!-- Enlace hacia la página de contacto -->
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>
         </div>
 
+        <!-- Texto principal del encabezado -->
         <div class="header__texto">
             <h2 class="no-margin">Blog de café con consejos y cursos</h2>
             <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
         </div>
     </header>
 
+    <!-- Contenido principal de la página Nosotros -->
     <main class="contenedor">
+
+        <!-- Título principal de la sección -->
         <h3 class="centrar-texto">Sobre Nosotros</h3>
 
+        <!-- Sección que agrupa la imagen y el texto informativo -->
         <div class="sobre-nosotros">
+
+            <!-- Contenedor de la imagen de la sección Nosotros -->
             <div class="sobre-nosotros__imagen">
                 <img src="img/nosotros.jpg" alt="Barista preparando café filtrado">
             </div>
 
+            <!-- Contenedor del texto descriptivo sobre BlogDeCafé -->
             <div class="sobre-nosotros__texto">
-                <p>En BlogDeCafé compartimos una forma sencilla y cercana de aprender sobre café. Nacimos como una guía para quienes quieren preparar mejores tazas en casa y hoy reunimos consejos, recetas y talleres pensados para todos los niveles.</p>
+                <p>
+                    En BlogDeCafé compartimos una forma sencilla y cercana de aprender sobre café. 
+                    Nacimos como una guía para quienes quieren preparar mejores tazas en casa y hoy 
+                    reunimos consejos, recetas y talleres pensados para todos los niveles.
+                </p>
 
-                <p>Creemos en el café bien explicado: origen, molienda, agua, extracción y servicio sin complicaciones innecesarias. Nuestro objetivo es que cada lectura o curso te deje una técnica concreta para probar en tu próxima preparación.</p>
+                <p>
+                    Creemos en el café bien explicado: origen, molienda, agua, extracción y servicio 
+                    sin complicaciones innecesarias. Nuestro objetivo es que cada lectura o curso te 
+                    deje una técnica concreta para probar en tu próxima preparación.
+                </p>
             </div>
         </div>
     </main>
 
+    <!-- Pie de página del sitio -->
     <footer class="footer">
+
+        <!-- Contenedor del footer -->
         <div class="contenedor">
+
+            <!-- Barra inferior con logo y navegación secundaria -->
             <div class="barra">
+
+                <!-- Logo del sitio en el pie de página -->
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Blog<span class="logo__bold">DeCafé</span>
+                    </h1>
                 </a>
 
+                <!-- Menú de navegación del pie de página -->
                 <nav class="navegacion" aria-label="Navegación del pie de página">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
@@ -65,6 +122,7 @@
         </div>
     </footer>
     
+    <!-- Archivo JavaScript para detectar compatibilidad del navegador -->
     <script src="js/modernizr.js"></script>
 </body>
 </html>

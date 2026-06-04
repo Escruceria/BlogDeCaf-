@@ -1,35 +1,63 @@
 <!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
 <html lang="es">
+<!-- Define el idioma principal de la página como español -->
+
 <head>
+    <!-- Configuración de caracteres para permitir tildes, ñ y símbolos especiales -->
     <meta charset="UTF-8">
+
+    <!-- Permite que el sitio sea responsive y se adapte a dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>BlogDeCafé | Consejos, recetas y cursos</title>
+
+    <!-- Descripción del sitio para buscadores como Google -->
     <meta name="description" content="Blog de café con consejos de preparación, recetas, guías de granos y cursos para aprender con baristas.">
 
-    <!-- Prefetch -->
+    <!-- Prefetch: carga anticipadamente la página nosotros.html para mejorar la navegación -->
     <link rel="prefetch" href="nosotros.html" as="document">
 
-    <!-- Preload -->
+    <!-- Preload del archivo normalize.css para cargarlo de forma prioritaria -->
     <link rel="preload" href="css/normalize.css" as="style">
+
+    <!-- Hoja de estilos normalize.css para estandarizar estilos entre navegadores -->
     <link rel="stylesheet" href="css/normalize.css">
 
+    <!-- Preconexión con Google Fonts para mejorar el tiempo de carga de las fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importación de fuentes externas desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- Preload de la hoja de estilos principal del proyecto -->
     <link rel="preload" href="css/style.css" as="style">
+
+    <!-- Archivo CSS principal donde se encuentran los estilos del sitio -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Encabezado principal del sitio -->
     <header class="header">
 
+        <!-- Contenedor general para centrar y limitar el ancho del contenido -->
         <div class="contenedor">
+
+            <!-- Barra superior con logo y menú de navegación -->
             <div class="barra">
+
+                <!-- Logo del sitio que enlaza a la página principal -->
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Blog<span class="logo__bold">DeCafé</span>
+                    </h1>
                 </a>
 
+                <!-- Menú de navegación principal -->
                 <nav class="navegacion" aria-label="Navegación principal">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
@@ -38,97 +66,169 @@
             </div>
         </div>
 
+        <!-- Texto principal del encabezado -->
         <div class="header__texto">
             <h2 class="no-margin">Blog de café con consejos y cursos</h2>
             <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
         </div>
     </header>
 
+    <!-- Contenedor principal que agrupa el blog y la barra lateral -->
     <div class="contenedor contenido-principal">
+
+        <!-- Contenido principal del sitio: entradas del blog -->
         <main class="blog">
             <h3>Nuestro Blog</h3>
 
+            <!-- Primera entrada del blog -->
             <article class="entrada">
+
+                <!-- Imagen de la entrada -->
                 <div class="entrada__imagen">
                     <picture>
-                        <source loading="lazy"  srcset="img/blog1.webp" type="image/webp">
+                        <!-- Imagen en formato WebP para navegadores compatibles -->
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+
+                        <!-- Imagen alternativa en formato JPG -->
                         <img loading="lazy" src="img/blog1.jpg" alt="imagen blog"> 
                     </picture>
                 </div>
 
+                <!-- Contenido textual de la entrada -->
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
-                    <p>Conoce las diferencias entre arábica, robusta y variedades de especialidad para elegir el grano ideal según tu método de preparación y perfil de sabor favorito.</p>
+                    <p>
+                        Conoce las diferencias entre arábica, robusta y variedades de especialidad 
+                        para elegir el grano ideal según tu método de preparación y perfil de sabor favorito.
+                    </p>
+
+                    <!-- Botón que lleva a la página de la entrada completa -->
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
+            <!-- Segunda entrada del blog -->
             <article class="entrada">
+
+                <!-- Imagen de la entrada -->
                 <div class="entrada__imagen">
                     <picture>
-                        <source loading="lazy"  srcset="img/blog2.webp" type="image/webp">
+                        <!-- Imagen optimizada en formato WebP -->
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+
+                        <!-- Imagen alternativa en formato JPG -->
                         <img loading="lazy" src="img/blog2.jpg" alt="imagen blog"> 
                     </picture>
                 </div>
 
+                <!-- Contenido textual de la entrada -->
                 <div class="entrada__contenido">
                     <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
-                    <p>Prepara bebidas sencillas y deliciosas en casa: cold brew, capuchino clásico y café especiado con ingredientes fáciles de conseguir.</p>
+                    <p>
+                        Prepara bebidas sencillas y deliciosas en casa: cold brew, capuchino clásico 
+                        y café especiado con ingredientes fáciles de conseguir.
+                    </p>
+
+                    <!-- Botón que lleva a la página de la entrada completa -->
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
+            <!-- Tercera entrada del blog -->
             <article class="entrada">
+
+                <!-- Imagen de la entrada -->
                 <div class="entrada__imagen">
                     <picture>
-                        <source loading="lazy"  srcset="img/blog3.webp" type="image/webp">
+                        <!-- Imagen optimizada en formato WebP -->
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+
+                        <!-- Imagen alternativa en formato JPG -->
                         <img loading="lazy" src="img/blog3.jpg" alt="imagen blog"> 
                     </picture>
                 </div>
 
+                <!-- Contenido textual de la entrada -->
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del Café</h4>
-                    <p>Descubre cómo disfrutar el café con equilibrio, qué hábitos ayudan a aprovecharlo mejor y por qué la calidad del grano marca la diferencia.</p>
+                    <p>
+                        Descubre cómo disfrutar el café con equilibrio, qué hábitos ayudan a aprovecharlo mejor 
+                        y por qué la calidad del grano marca la diferencia.
+                    </p>
+
+                    <!-- Botón que lleva a la página de la entrada completa -->
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
         </main>
+
+        <!-- Barra lateral con cursos y talleres destacados -->
         <aside class="sidebar">
             <h3>Nuestros Cursos y Talleres</h3>
 
+            <!-- Lista de cursos disponibles -->
             <ul class="cursos no-padding">
+
+                <!-- Primer curso destacado -->
                 <li class="widget-curso">
                     <h4 class="no-margin">Técnicas de Extracción de Café</h4>
-                    <p class="widget-curso__label">Precio: 
+
+                    <!-- Información del precio del curso -->
+                    <p class="widget-curso__label">
+                        Precio: 
                         <span class="widget-curso__info">Gratis</span>
                     </p>
-                    <p class="widget-curso__label">Cupo: 
+
+                    <!-- Información del cupo disponible -->
+                    <p class="widget-curso__label">
+                        Cupo: 
                         <span class="widget-curso__info">20</span>
                     </p>
+
+                    <!-- Enlace hacia la página de cursos -->
                     <a href="cursos.html" class="boton boton--secundario">Ver Cursos</a>
                 </li>
 
+                <!-- Segundo curso destacado -->
                 <li class="widget-curso">
                     <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
-                    <p class="widget-curso__label">Precio: 
+
+                    <!-- Información del precio del curso -->
+                    <p class="widget-curso__label">
+                        Precio: 
                         <span class="widget-curso__info">Gratis</span>
                     </p>
-                    <p class="widget-curso__label">Cupo: 
+
+                    <!-- Información del cupo disponible -->
+                    <p class="widget-curso__label">
+                        Cupo: 
                         <span class="widget-curso__info">20</span>
                     </p>
+
+                    <!-- Enlace hacia la página de cursos -->
                     <a href="cursos.html" class="boton boton--secundario">Ver Cursos</a>
                 </li>
             </ul>
         </aside>
     </div>
 
+    <!-- Pie de página del sitio -->
     <footer class="footer">
+
+        <!-- Contenedor del footer -->
         <div class="contenedor">
+
+            <!-- Barra inferior con logo y navegación secundaria -->
             <div class="barra">
+
+                <!-- Logo del sitio en el pie de página -->
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Blog<span class="logo__bold">DeCafé</span>
+                    </h1>
                 </a>
 
+                <!-- Navegación del pie de página -->
                 <nav class="navegacion" aria-label="Navegación del pie de página">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
@@ -138,6 +238,7 @@
         </div>
     </footer>
     
+    <!-- Archivo JavaScript para detectar compatibilidad del navegador con ciertas funcionalidades -->
     <script src="js/modernizr.js"></script>
 </body>
 </html>
